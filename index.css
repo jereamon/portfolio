@@ -1,12 +1,20 @@
 * {
   box-sizing: border-box;
-  font-family: "Raleway";
   margin: 0;
   padding: 0;
 }
 
 body {
   background-color: #f9f9f9;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Raleway";
+  font-weight: normal;
+}
+
+p {
+  font-family: 'Open Sans';
 }
 
 /* Nav Portion */
@@ -137,11 +145,11 @@ body {
 
 /* About portion */
   #about {
-    padding: 40px;
+    padding: 40px 0;
   }
 
   .about-section {
-    margin: 0 auto;
+    margin: 60px auto 160px;
     width: 66%;
   }
 
@@ -151,9 +159,18 @@ body {
   }
 
   .about-text-container {
+    color: #77777e;
+    font-size: 18px;
     margin: 20px auto 0;
-    width: 66%;
+    max-width: 650px;
   }
+
+  .about-text-container p {
+    letter-spacing: 120%;
+    line-height: 23px;
+    text-indent: 40px;
+  }
+/* About Portion Ends */
 
 @media (max-width:1800px) {
   .header-container {
@@ -164,12 +181,34 @@ body {
     margin: 200px auto 0;
   }
 
+  .projects-container-header {
+    font-size: 45px;
+  }
+
   .project-container {
-    max-height: 400px;
+    max-height: 300px;
+  }
+
+  .about-header {
+    font-size: 45px;
   }
 }
 
-@media (max-width:800px) {
+@media (max-width:900px) {
+  .header-container {
+    background-position: right;
+  }
+
+  .projects-container-header {
+    font-size: 40px;
+  }
+
+  .about-header {
+    font-size: 40px;
+  }
+}
+
+@media (max-width:500px) {
   .header-container {
     background-image: url('macbook-white-wall-portrait-2.jpg');
   }
@@ -194,7 +233,31 @@ body {
     /* width: 90%; */
   }
 
+  .projects-section {
+    margin: 0 auto;
+  }
+
+  .projects-container-header {
+    font-size: 25px;
+    width: 82.5%;
+  }
+
   .project-container {
     max-height: 250px;
+    max-width: 66%;
+  }
+
+  .about-section {
+    margin: 40px auto;
+    width: 82.5%;
+  }
+
+  .about-header {
+    font-size: 25px;
+  }
+
+  .about-text-container {
+    font-size: 15px;
+    max-width: 100%;
   }
 }
