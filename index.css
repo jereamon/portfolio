@@ -1,0 +1,166 @@
+* {
+  box-sizing: border-box;
+  font-family: "Raleway";
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f9f9f9;
+}
+
+/* Nav Portion */
+  nav {
+    animation: nav;
+    animation-duration: 4000ms;
+    background-color: #4f3558;
+    align-items: center;
+    display: flex;
+    height: 40px;
+    justify-content: space-around;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+  }
+
+  @keyframes nav {
+    0% {opacity: 0}
+    100% {opacity: 1}
+  }
+
+  .nav-link {
+    color: white;
+    font-size: 18px;
+    padding: 9px 15px;
+    text-decoration: none;
+  }
+
+  .nav-link:hover {
+    background-color: #825791;
+  }
+
+  .current-link {
+    background-color: #825791;
+  }
+/* Nav Portion Ends */
+
+/* Header Portion */
+  .header-container {
+    animation: header-container;
+    animation-duration: 3000ms;
+    background-image: url('macbook-white-wall-f9-bottom.jpg');
+    background-size: cover;
+    background-position: bottom;
+    overflow: hidden;
+    height: 100vh;
+    width: 100%;
+  }
+
+  @keyframes header-container {
+    0% {opacity: 0}
+    100% {opacity: 1}
+  }
+
+  .header-content {
+    align-items: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 200px 0 0;
+    height: 450px;
+    max-width: 800px;
+    text-align: center;
+    text-shadow: 0px 0px 5px rgba(50, 50, 50, 0.45);
+  }
+
+  .header-header {
+    animation: header-header;
+    animation-duration: 3000ms;
+    font-size: 70px;
+  }
+
+  @keyframes header-header {
+    0% {opacity: 0}
+    25% {opacity: 0}
+    100% {opacity: 1}
+  }
+
+  .header-text-container {
+    animation: header-text;
+    animation-duration: 4000ms;
+    font-size: 28px;
+    max-width: 600px;
+  }
+
+  @keyframes header-text {
+    0% {opacity: 0}
+    25% {opacity: 0}
+    100% {opacity: 1}
+  }
+/* Header Portion Ends */
+
+.projects-container {
+  display: flex;
+  /* flex-direction: column; */
+  margin: 110px auto 0;
+  padding: 40px 0 0;
+  width: 82.5%;
+}
+
+.projects-container-header {
+  font-size: 50px;
+}
+
+.project-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 25px 0;
+  /* padding: 25px 0; */
+}
+
+.project-header {
+  font-size: 22px;
+  text-align: center;
+}
+
+.project-image {
+  width: 82.5%;
+}
+
+@media (max-width:1800px) {
+  .header-container {
+    background-image: url('macbook-white-wall-all-but-gradient-blurred.jpg');
+  }
+
+  .header-content {
+    margin: 200px auto 0;
+  }
+}
+
+@media (max-width:800px) {
+  .header-container {
+    background-image: url('macbook-white-wall-portrait-2.jpg');
+  }
+
+  .header-content {
+    /* justify-content: space-around; */
+    height: 100vh;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  .header-header {
+    font-size: 35px;
+    padding: 100px 0 0;
+  }
+
+  .header-text-container {
+    color: black;
+    font-size: 16px;
+    padding: 0 0 60px;
+    text-shadow: none;
+    /* width: 90%; */
+  }
+}
