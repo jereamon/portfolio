@@ -7,6 +7,7 @@ hamburger.addEventListener('click', function () {
 });
 
 
+
 // NAV HIGHLIGHT SECTION
 const headerContainer = document.querySelector('#header');
 const projectsContainer = document.querySelector('#projects');
