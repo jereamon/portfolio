@@ -9,7 +9,6 @@
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700|Raleway:400,700"
     rel="stylesheet">
   <link rel="stylesheet" href="index.css">
-  <link href="lightbox2-master\dist\css\lightbox.css" rel="stylesheet">
 </head>
 
 <body>
@@ -24,13 +23,13 @@
     </div>
     <!-- Burger Container Closes -->
     <div class="nav-links-container">
-      <a class='nav-link dropdown-link current-link' href="index.html">Home</a>
+      <a class='nav-link dropdown-link current-link' href="#header">Home</a>
       <a class='nav-link dropdown-link' href="#projects">Projects</a>
       <a class='nav-link dropdown-link' href="#about">About</a>
     </div>
   </nav>
 
-  <div class="header-container">
+  <div id='header' class="header-container">
     <div class="header-content">
       <h1 class="header-header">My name is Jeremy.</h1>
       <div class="header-text-container">
@@ -50,22 +49,33 @@
     </h3>
     <div class="projects-container">
       <div class="project-container">
-        <a href="freeCodeCamp-portfolio.png" data-lightbox='portfolio-project' data-title='freeCodeCamp Portfolio Project'>
-          <img src="freeCodeCamp-portfolio.png" alt="" class="project-image">
-        </a>
+        <img class="project-image image-1" src="freeCodeCamp-portfolio.png" alt="freeCodeCamp Portfolio Project"></img>
       </div>
       <div class="project-container">
-        <a href="adventure-site-home.png" data-lightbox="adventure-site-home" data-title="Adventure Site Home">
-          <img src="adventure-site-home.png" alt="" class="project-image">
-        </a>
+        <img class="project-image image-2" src="adventure-site-home.png" alt="My Adeventures Blog"></img>
       </div>
       <div class="project-container">
-        <a href="knife-site-home.png" data-lightbox="knife-site-home" data-title="Knife Sharpening Site Home">
-          <img src="knife-site-home.png" alt="" class="project-image">
-        </a>
+        <img class="project-image image-3" src="knife-site-home.png" alt="Knife Sharpening Home Page"></img>
       </div>
     </div>
   </div>
+
+  <div class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <p class="modal-header-text"></p>
+        <span class="modal-close-button">&times;</span>
+      </div>
+      <!-- modal-header closes -->
+      <div class="modal-image-container">
+        <span class="modal-arrows">&#8592;</span>
+        <img class='modal-image' src="" alt="">
+        <span class="modal-arrows">&#8594;</span>
+      </div>
+    </div>
+    <!-- modal-content closes -->
+  </div>
+  <!-- modal closes -->
 
   <div id="about" class="about-section">
     <h3 class="about-header">About me:</h3>
@@ -96,7 +106,6 @@
 
   <div class="footer-container">
     <p class="footer-info">
-      
     </p>
   </div>
 
@@ -105,9 +114,6 @@
   </div>
 
   <script src="app.js"></script>
-  <script src="http://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-  <script src="lightbox2-master\dist\js\lightbox.js"></script>
 </body>
 
 </html>

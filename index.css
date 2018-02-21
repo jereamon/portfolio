@@ -6,6 +6,8 @@
 
 body {
   background-color: #f9f9f9;
+  scroll-behavior: smooth;
+  overflow-y: scroll;
 }
 
 h1, h2, h3, h4, h5 {
@@ -156,7 +158,69 @@ p {
   .project-image {
     width: 100%;
   }
+
+  .project-image:hover {
+    cursor: pointer;
+  }
 /* Projects Portion Ends */
+
+/* Modal that may never work portion */
+  .modal {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    overflow: auto;
+    position: fixed;
+    top: 0;
+    transition: 500ms;
+    width: 100%;
+    visibility: hidden;
+    z-index: 3;
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 80px auto;
+    padding: 0 20px 20px;
+    border: 4px solid #888;
+    width: 80%;
+  }
+
+  .modal-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+  }
+
+  .modal-header-text {
+    font-size: 22px;
+  }
+
+  .modal-close-button {
+    float: right;
+    font-size: 35px;
+  }
+
+  .modal-close-button:hover {
+    cursor: pointer;
+  }
+
+  .modal-image-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .modal-image {
+    max-height: 1200px;
+    max-width: 95%;
+  }
+
+  .modal-arrows {
+    font-size: 35px;
+  }
+/* Modal Portion Closes */
 
 /* About portion */
   #about {
@@ -164,6 +228,7 @@ p {
   }
 
   .about-section {
+    height: 100%;
     margin: 60px auto 160px;
     width: 66%;
   }
@@ -175,20 +240,16 @@ p {
 
   .about-text-container {
     color: #77777e;
-    font-size: 18px;
+    font-size: 22px;
     margin: 20px auto 0;
-    max-width: 650px;
-  }
-
-  .about-text-container p {
+    max-width: 700px;
     letter-spacing: 120%;
-    line-height: 23px;
+    line-height: 28px;
     text-indent: 40px;
   }
 /* About Portion Ends */
 
 /* Footer Portion */
-  
 /* Footer Portion Ends */
 
 @media (max-width:1800px) {
@@ -210,6 +271,11 @@ p {
 
   .about-header {
     font-size: 45px;
+  }
+
+  .about-text-container {
+    line-height: 23px;
+    font-size: 18px;
   }
 }
 
