@@ -20,7 +20,7 @@ p {
 /* Nav Portion */
   nav {
     animation: nav;
-    animation-duration: 4000ms;
+    animation-duration: 2000ms;
     background-color: #4f3558;
     align-items: center;
     display: flex;
@@ -56,6 +56,14 @@ p {
 
   .current-link {
     background-color: #825791;
+  }
+
+  .bottom-nav-container {
+    animation: nav;
+    animation-duration: 2000ms;
+    background-color: #4f3558;
+    height: 40px;
+    width: 100%;
   }
 /* Nav Portion Ends */
 
@@ -103,7 +111,7 @@ p {
 
   .header-text-container {
     animation: header-text;
-    animation-duration: 4000ms;
+    animation-duration: 3000ms;
     font-size: 28px;
     max-width: 600px;
   }
@@ -178,6 +186,10 @@ p {
     text-indent: 40px;
   }
 /* About Portion Ends */
+
+/* Footer Portion */
+  
+/* Footer Portion Ends */
 
 @media (max-width:1800px) {
   .header-container {
@@ -269,7 +281,7 @@ p {
       -webkit-transform: rotate(45deg) translate(-8px, -8px);
       transform: rotate(45deg) translate(-8px, -8px);
     }
-/* Hamburger Styles End */
+  /* Hamburger Styles End */
 
   .header-container {
     background-image: url('macbook-white-wall-portrait-2.jpg');
