@@ -8,6 +8,10 @@ hamburger.addEventListener('click', function () {
 
 
 
+// INITIALIZE SMOOTH SCROLL
+var scroll = new SmoothScroll('a[href*="#"]');
+
+
 // NAV HIGHLIGHT SECTION
 const headerContainer = document.querySelector('#header');
 const projectsContainer = document.querySelector('#projects');
