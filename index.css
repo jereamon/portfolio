@@ -137,6 +137,12 @@ p {
   .projects-container-header {
     color: #909095;
     font-size: 50px;
+    margin: 0 auto 10px;
+    width: 66%;
+  }
+
+  .click-larger-image {
+    color: #909095;
     margin: 0 auto 50px;
     width: 66%;
   }
@@ -198,7 +204,6 @@ p {
   }
 
   .modal-close-button {
-    float: right;
     font-size: 35px;
   }
 
@@ -210,6 +215,7 @@ p {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
   }
 
   .modal-image {
@@ -279,6 +285,16 @@ p {
   }
 }
 
+@media (max-width:1400px) {
+  .modal-content {
+    margin: 60px auto;
+  }
+
+  .modal-image {
+    max-width: 85%;
+  }
+}
+
 @media (max-width:900px) {
   .header-container {
     background-position: right;
@@ -286,6 +302,18 @@ p {
 
   .projects-container-header {
     font-size: 40px;
+  }
+
+  .project-container {
+    max-width: 90%;
+  }
+
+  .modal-header {
+    padding: 10px;
+  }
+
+  .modal-header-text {
+    font-size: 20px
   }
 
   .about-header {
@@ -349,41 +377,64 @@ p {
     }
   /* Hamburger Styles End */
 
-  .header-container {
-    background-image: url('macbook-white-wall-portrait-2.jpg');
-  }
+  /* Header Portion */
+    .header-container {
+      background-image: url('macbook-white-wall-portrait-2.jpg');
+    }
 
-  .header-content {
-    height: 100vh;
-    margin: 0 auto;
-    width: 90%;
-  }
+    .header-content {
+      height: 100vh;
+      margin: 0 auto;
+      width: 90%;
+    }
 
-  .header-header {
-    font-size: 35px;
-    padding: 100px 0 0;
-  }
+    .header-header {
+      font-size: 35px;
+      padding: 100px 0 0;
+    }
 
-  .header-text-container {
-    color: black;
-    font-size: 16px;
-    padding: 0 0 60px;
-    text-shadow: none;
-  }
+    .header-text-container {
+      color: black;
+      font-size: 16px;
+      padding: 0 0 60px;
+      text-shadow: none;
+    }
+  /* Header Portion Ends */
 
-  .projects-section {
-    margin: 0 auto;
-  }
+  /* Projects Portion */
+    .projects-section {
+      margin: 0 auto;
+    }
 
-  .projects-container-header {
-    font-size: 25px;
-    width: 82.5%;
-  }
+    .projects-container-header {
+      font-size: 25px;
+      width: 82.5%;
+    }
 
-  .project-container {
-    max-height: 250px;
-    max-width: 66%;
-  }
+    .project-container {
+      max-height: 250px;
+      /* max-width: 66%; */
+    }
+  /* Projects Portion Ends */
+
+  /* Modal Portion */
+    .modal-content {
+      width: 85%;
+      padding: 0 10px;
+    }
+
+    .modal-header-text {
+      font-size: 15px;
+    }
+
+    .modal-close-button {
+      font-size: 27px;
+    }
+
+    .modal-arrows {
+      font-size: 18px;
+    }
+  /* Modal Portion Ends */
 
   .about-section {
     margin: 40px auto;
