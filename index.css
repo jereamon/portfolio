@@ -64,6 +64,10 @@ p {
     animation: nav;
     animation-duration: 2000ms;
     background-color: #4f3558;
+    color: #bcbcc5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     height: 40px;
     width: 100%;
   }
@@ -256,7 +260,28 @@ p {
 /* About Portion Ends */
 
 /* Footer Portion */
+  .footer-container {
+    margin: 0 auto 50px;
+    width: 82.5%;
+    text-align: center;
+  }
+
+  .footer-links {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 0;
+    width: 100%;
+  }
+
+  .footer-link {
+    padding: 0 10px;
+  }
+
+  .footer-links img {
+    max-width: 80px;
+  }
 /* Footer Portion Ends */
+
 
 @media (max-width:1800px) {
   .header-container {
@@ -292,6 +317,10 @@ p {
 
   .modal-image {
     max-width: 85%;
+  }
+
+  .footer-links img {
+    max-width: 65px;
   }
 }
 
@@ -353,7 +382,7 @@ p {
       cursor: pointer;
       position: fixed;
       right: 15px;
-      top: 2px;
+      top: 0px;
     }
 
     .bar1, .bar2, .bar3 {
@@ -374,6 +403,10 @@ p {
     .change .bar3 {
       -webkit-transform: rotate(45deg) translate(-8px, -8px);
       transform: rotate(45deg) translate(-8px, -8px);
+    }
+
+    .bottom-nav-container {
+      font-size: 12px;
     }
   /* Hamburger Styles End */
 
@@ -408,12 +441,16 @@ p {
 
     .projects-container-header {
       font-size: 25px;
+      margin: 40px auto 5px;
       width: 82.5%;
+    }
+
+    .click-larger-image {
+      margin: 0 auto 25px;
     }
 
     .project-container {
       max-height: 250px;
-      /* max-width: 66%; */
     }
   /* Projects Portion Ends */
 
@@ -431,9 +468,9 @@ p {
       font-size: 27px;
     }
 
-    .modal-arrows {
+    /* .modal-arrows {
       font-size: 18px;
-    }
+    } */
   /* Modal Portion Ends */
 
   .about-section {
@@ -448,5 +485,9 @@ p {
   .about-text-container {
     font-size: 15px;
     max-width: 100%;
+  }
+
+  .footer-links img {
+    max-width: 45px;
   }
 }

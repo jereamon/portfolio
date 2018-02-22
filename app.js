@@ -19,9 +19,6 @@ const aboutContainer = document.querySelector('#about');
 
 const navLinks = document.querySelectorAll('.nav-link');
 
-// let headerOffset = headerContainer.getBoundingClientRect();
-// let projectsOffset = projectsContainer.getBoundingClientRect();
-// let aboutOffset = aboutContainer.getBoundingClientRect();
 let headerOffset = headerContainer.offsetHeight;
 let projectsOffset = projectsContainer.offsetHeight + projectsContainer.offsetTop;
 
@@ -38,6 +35,13 @@ window.onscroll = function () {
     navLinks[0].classList.add('current-link');
     navLinks[1].classList.remove('current-link');
     navLinks[2].classList.remove('current-link');
+  }
+}
+
+for (let i = 0; i < navLinks.length; i++) {
+  navLinks[i].onclick = function () {
+    hamburger.classList.toggle("change");
+    navLinksContainer.classList.toggle("open-nav-links");
   }
 }
 
