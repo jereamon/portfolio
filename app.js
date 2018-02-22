@@ -88,24 +88,32 @@ function gallery(galleryIndexModifier) {
 }
 
 modalNextButton.onclick = function () {
-  galleryImageIndex += 1;
-  if (modalImage.getAttribute('src').indexOf('project-1') >= 0) {
-    if (galleryImageIndex > galleryOne.length - 1) {
+  galleryFunctionality(1);
+}
+
+modalPreviousButton.onclick = function () {
+  galleryFunctionality(-1);
+}
+
+function galleryFunctionality (galleryIndexModifier) {
+  galleryImageIndex += galleryIndexModifier;
+  let currentImageSrc = modalImage.getAttribute('src');
+  if (currentImageSrc.indexOf('project-1') >= 0) {
+    if (galleryImageIndex < 0) {
+      galleryImageIndex = galleryOne.length - 1;
+    } else if (galleryImageIndex > galleryOne.length - 1) {
       galleryImageIndex = 0;
     }
     modalHeaderText.textContent = galleryOne[galleryImageIndex][1];
     modalImage.setAttribute('src', galleryOne[galleryImageIndex][0]);
-  }
-}
-
-modalPreviousButton.onclick = function () {
-  galleryImageIndex -= 1;
-  if (modalImage.getAttribute('src').indexOf('project-1') >= 0) {
+  } else if (currentImageSrc.indexOf('project-2' >= 0)) {
     if (galleryImageIndex < 0) {
-      galleryImageIndex = galleryOne.length - 1;
+      galleryImageIndex = galleryTwo.length - 1;
+    } else if (galleryImageIndex > galleryTwo.length - 1) {
+      galleryImageIndex = 0;
     }
-    modalHeaderText.textContent = galleryOne[galleryImageIndex][1];
-    modalImage.setAttribute('src', galleryOne[galleryImageIndex][0]);
+    modalHeaderText.textContent = galleryTwo[galleryImageIndex][1];
+    modalImage.setAttribute('src', galleryTwo[galleryImageIndex][0]);
   }
 }
 
@@ -128,6 +136,15 @@ const galleryOne = [
   ["project-photos/project-1/freeCodeCamp-portfolio-2.jpg", "freeCodeCamp Portfolio Bottom"]
 ]
 
-const galleryTwo = {
+const galleryTwo = [
+  ["project-photos/project-2/adventure-site-home.png", "My Adventures Blog"],
+  ["project-photos/project-2/adventure-site-about.png", "About Page"],
+  ["project-photos/project-2/adventure-stories-page.png", "Stories Page"],
+  ["project-photos/project-2/adventure-gallery-upclose.jpg", "Gallery I Wrote From Scratch"]
+]
 
-}
+const galleryThree = [
+  ["project-photos/project-3/knife-site-home.png", "Knife Sharpening Home Page"],
+  ["project-photos/project-3/knife-site-contact.png", "Contact Page"],
+  ["project-photos/project-3/knife-site-rates.png", "Rates Page"]
+]
