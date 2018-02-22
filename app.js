@@ -51,10 +51,15 @@ const modal = document.querySelector('.modal');
 const modalHeaderText = document.querySelector('.modal-header-text');
 const modalCloseButton = document.querySelector('.modal-close-button');
 const modalImage = document.querySelector('.modal-image');
+const modalNextButton = document.querySelector('.modal-next');
+const modalPreviousButton = document.querySelector('.modal-previous');
+
+let galleryImageIndex = 0;
 
 for (let i = 0; i < projectImages.length; i++) {
   projectImages[i].onclick = function () {
     imageInModal(this);
+    let galleryImageIndex = 0;
   }
 }
 
@@ -78,6 +83,32 @@ function imageInModal(clickedImage) {
   modalImage.setAttribute('src', selectedImageSrc);
 }
 
+function gallery(galleryIndexModifier) {
+  alert('Inside gallery function num is: ' + num + ' galleryImageIndex is: ' + galleryImageIndex);
+}
+
+modalNextButton.onclick = function () {
+  galleryImageIndex += 1;
+  if (modalImage.getAttribute('src').indexOf('project-1') >= 0) {
+    if (galleryImageIndex > galleryOne.length - 1) {
+      galleryImageIndex = 0;
+    }
+    modalHeaderText.textContent = galleryOne[galleryImageIndex][1];
+    modalImage.setAttribute('src', galleryOne[galleryImageIndex][0]);
+  }
+}
+
+modalPreviousButton.onclick = function () {
+  galleryImageIndex -= 1;
+  if (modalImage.getAttribute('src').indexOf('project-1') >= 0) {
+    if (galleryImageIndex < 0) {
+      galleryImageIndex = galleryOne.length - 1;
+    }
+    modalHeaderText.textContent = galleryOne[galleryImageIndex][1];
+    modalImage.setAttribute('src', galleryOne[galleryImageIndex][0]);
+  }
+}
+
 function fadeInModal() {
   modal.style.visibility = 'visible';
   modal.style.opacity = 1;
@@ -90,4 +121,13 @@ function fadeOutModal() {
     modalImage.setAttribute('src', '');
     modal.style.visibility = 'hidden';
   }, 250);
+}
+
+const galleryOne = [
+  ["project-photos/project-1/freeCodeCamp-portfolio.jpg", "freeCodeCamp Portfolio Top"],
+  ["project-photos/project-1/freeCodeCamp-portfolio-2.jpg", "freeCodeCamp Portfolio Bottom"]
+]
+
+const galleryTwo = {
+
 }

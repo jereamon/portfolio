@@ -228,7 +228,11 @@ p {
   }
 
   .modal-arrows {
-    font-size: 35px;
+    font-size: 100px;
+  }
+
+  .modal-arrows:hover {
+    cursor: pointer;
   }
 /* Modal Portion Closes */
 
@@ -315,10 +319,6 @@ p {
     margin: 60px auto;
   }
 
-  .modal-image {
-    max-width: 85%;
-  }
-
   .footer-links img {
     max-width: 65px;
   }
@@ -343,6 +343,14 @@ p {
 
   .modal-header-text {
     font-size: 20px
+  }
+
+  .modal-image {
+    max-width: 90%;
+  }
+
+  .modal-arrows {
+    font-size: 80px;
   }
 
   .about-header {
@@ -457,7 +465,7 @@ p {
   /* Modal Portion */
     .modal-content {
       width: 85%;
-      padding: 0 10px;
+      padding: 0 10px 10px;
     }
 
     .modal-header-text {
@@ -468,9 +476,9 @@ p {
       font-size: 27px;
     }
 
-    /* .modal-arrows {
-      font-size: 18px;
-    } */
+    .modal-arrows {
+      font-size: 40px;
+    }
   /* Modal Portion Ends */
 
   .about-section {
