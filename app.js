@@ -95,7 +95,7 @@ modalPreviousButton.onclick = function () {
   galleryFunctionality(-1);
 }
 
-function galleryFunctionality (galleryIndexModifier) {
+function galleryFunctionality(galleryIndexModifier) {
   galleryImageIndex += galleryIndexModifier;
   let currentImageSrc = modalImage.getAttribute('src');
   if (currentImageSrc.indexOf('project-1') >= 0) {
@@ -106,7 +106,7 @@ function galleryFunctionality (galleryIndexModifier) {
     }
     modalHeaderText.textContent = galleryOne[galleryImageIndex][1];
     modalImage.setAttribute('src', galleryOne[galleryImageIndex][0]);
-  } else if (currentImageSrc.indexOf('project-2' >= 0)) {
+  } else if (currentImageSrc.indexOf('project-2') >= 0) {
     if (galleryImageIndex < 0) {
       galleryImageIndex = galleryTwo.length - 1;
     } else if (galleryImageIndex > galleryTwo.length - 1) {
@@ -114,6 +114,14 @@ function galleryFunctionality (galleryIndexModifier) {
     }
     modalHeaderText.textContent = galleryTwo[galleryImageIndex][1];
     modalImage.setAttribute('src', galleryTwo[galleryImageIndex][0]);
+  } else if (currentImageSrc.indexOf('project-3') >= 0) {
+    if (galleryImageIndex < 0) {
+      galleryImageIndex = galleryThree.length - 1;
+    } else if (galleryImageIndex > galleryThree.length - 1) {
+      galleryImageIndex = 0;
+    }
+    modalHeaderText.textContent = galleryThree[galleryImageIndex][1];
+    modalImage.setAttribute('src', galleryThree[galleryImageIndex][0]);
   }
 }
 
